@@ -1,0 +1,20 @@
+# Конфиг с токеном — НЕ коммитить
+src/main/resources/application.properties
+
+# Данные пользователей
+data/
+logs/
+
+# Сборка
+build/
+.gradle/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# ОС
+.DS_Store
+Thumbs.db
