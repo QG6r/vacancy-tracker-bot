@@ -1,11 +1,11 @@
-# Конфиг с токеном — НЕ коммитить
+# Config with the bot token: never commit
 src/main/resources/application.properties
 
-# Данные пользователей
+# User data
 data/
 logs/
 
-# Сборка
+# Build output
 build/
 .gradle/
 out/
@@ -15,6 +15,9 @@ out/
 *.iml
 .vscode/
 
-# ОС
+# OS
 .DS_Store
 Thumbs.db
+
+# Local environment (token)
+.env

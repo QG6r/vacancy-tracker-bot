@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    container_name: vacancy-tracker-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      STORAGE_PATH: /app/data
+    volumes:
+      - bot-data:/app/data
+
+volumes:
+  bot-data:
