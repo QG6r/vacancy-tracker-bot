@@ -7,7 +7,7 @@ notified; once a day the bot queries the open API of the Russian federal job por
 > The bot talks to users in Russian, because the data source covers Russian regions and vacancies. Everything else
 > (code, documentation, comments) is in English.
 
-Final project of the Skillbox "Advanced Java Core" course. Built solo.
+Final project of a Skillbox Java course, built solo.
 
 ## Features
 
