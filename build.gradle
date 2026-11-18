@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
     id 'jacoco'
 }
 
@@ -10,6 +11,10 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
+}
+
+application {
+    mainClass = 'ru.skillbox.vacancybot.Application'
 }
 
 repositories {
@@ -31,7 +36,7 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.36'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
 
-    // Тесты
+    // Tests
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
     testImplementation 'org.mockito:mockito-core:5.14.2'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.14.2'
@@ -50,7 +55,7 @@ def coverageExclusions = [
         'ru/skillbox/vacancybot/Application*'
 ]
 
-// Отчёт о покрытии: build/reports/jacoco/test/html/index.html
+// Coverage report: build/reports/jacoco/test/html/index.html
 jacocoTestReport {
     dependsOn test
     reports {
@@ -64,7 +69,7 @@ jacocoTestReport {
     }
 }
 
-// Проверка порога покрытия: ./gradlew jacocoTestCoverageVerification
+// Coverage gate: ./gradlew jacocoTestCoverageVerification
 jacocoTestCoverageVerification {
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {

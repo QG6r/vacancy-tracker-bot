@@ -18,6 +18,6 @@
         <appender-ref ref="FILE"/>
     </root>
 
-    <!-- Библиотека Telegram слишком болтлива на DEBUG -->
+    <!-- The Telegram library is too chatty at DEBUG -->
     <logger name="org.telegram" level="WARN"/>
 </configuration>
